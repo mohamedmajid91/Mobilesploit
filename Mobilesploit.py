@@ -153,6 +153,91 @@ def meta_logo():
 	print "       https://metasploit.com"
 	print
 
+def unilogo():
+	console.set_font("Menlo",11)
+	console.set_color(0,0,1)
+	sys.stdout.write(u"""\n\t\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588               \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t\u2588\u2588\u2588\u2588\u2588                           \u2588\u2588\u2588\u2588\u2588\n\t\u2588\u2588\u2588\u2588\u2588""")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588             \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588             \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u" \u2588\u2588\u2588\u2588\u2588    \u2588\u2588 \u2588\u2588    \u2588\u2588\u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u" \u2588\u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588\u2588")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588    ")
+	console.set_color(1,1,1)
+	sys.stdout.write(u"\u2588\u2588  \u2588  \u2588\u2588    ")
+	console.set_color(0,0,1)
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588             \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588         \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t")
+	sys.stdout.write(u"\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\t")
+	console.set_color(1,1,1)
+	print "       https://metasploit.com"
+	print
+	console.set_font("Menlo",8)
+	print """
+       =[ mobilesploit v1.4.4.02725-mobile                ]
++ -- --=[ %s exploits - %s auxiliary - 0 post               ]
++ -- --=[ %s payloads - 0 encoders - 0 nops                ]
++ -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
+	
+	""" %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payloads"))-1)
+	time.sleep(0.5)
+	console.set_font("Menlo",9.5)
+
 meta_logo()
 
 def auto_cmd(cmd,description):
@@ -161,7 +246,7 @@ def auto_cmd(cmd,description):
 
 console.set_font("Menlo",8)
 print """
-       =[ mobilesploit v1.4.4.02722-mobile                ]
+       =[ mobilesploit v1.4.4.02725-mobile                ]
 + -- --=[ %s exploits - %s auxiliary - 0 post               ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
@@ -261,6 +346,7 @@ def meta_help(data,loc):
 		auto_cmd("show options","Display Module Options")
 		auto_cmd("size","Changes font size")
 		auto_cmd("clear","Resets screen activity")
+		auto_cmd("banner","Show the Unicode Banner")
 		print
 
 def cpoint(loc=""):
@@ -300,6 +386,8 @@ def cpoint(loc=""):
 			break
 		if data == "exit": 
 			exit()
+		if data == "banner":
+			unilogo()
 		meta_help(data,loc)
 		if data.startswith("size ") and len(data) > 4:
 			data = data[4:]
