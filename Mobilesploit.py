@@ -347,6 +347,7 @@ def meta_help(data,loc):
 		auto_cmd("size","Changes font size")
 		auto_cmd("clear","Resets screen activity")
 		auto_cmd("banner","Show the Unicode Banner")
+		auto_cmd("show exploits","Shows available exploits")
 		print
 
 def cpoint(loc=""):
