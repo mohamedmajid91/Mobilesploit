@@ -371,6 +371,7 @@ def meta_help(data,loc):
 		auto_cmd("clear","Resets screen activity")
 		auto_cmd("banner","Show the Unicode Banner")
 		auto_cmd("show exploits","Show Available Exploits")
+		auto_cmd("show payloads","Show Available Payloads")
 		print
 
 def cpoint(loc=""):
