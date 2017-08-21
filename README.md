@@ -1,10 +1,12 @@
 Mobilesploit
 ============
 
-***iOS Python Version of Metasploit***
+Python Version of Metasploit For iOS
+====================================
 
-**NOT MADE FOR MALICIOUS USE**
+
 
 [RussianOtter](https://instagram.com/russianotter)
+==============
 
-_PLEASE SUPPORT METASPLOIT'S OFFICIAL RELEASE_
+**PLEASE SUPPORT METASPLOIT'S OFFICIAL RELEASE**
