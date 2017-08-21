@@ -229,16 +229,34 @@ def unilogo():
 	print
 	console.set_font("Menlo",8)
 	print """
-       =[ mobilesploit v1.4.4.02725-mobile                ]
-+ -- --=[ %s exploits - %s auxiliary - 0 post               ]
+       =[ mobilesploit v1.5.4.72942-mobile                ]
++ -- --=[ %s exploits - %s auxiliary - 1 post               ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
 	
-	""" %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payloads"))-1)
+	""" %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payload"))-1)
 	time.sleep(0.5)
 	console.set_font("Menlo",9.5)
 
 meta_logo()
+
+def auto_pay(name,size):
+	au = "  "+name+" "*(19-len(name)) + str(size)
+	print au
+
+def show_payload():
+	print "\nAvailable Payloads"
+	print "==================\n"
+	print "  Name               Size"
+	print "  ----               ----"
+	try:
+		for _ in os.listdir("./payload"):
+			if "." in _ and "__" not in _:
+				payinfo = _, len(open("./payload/"+_).read())
+				auto_pay(payinfo[0], payinfo[1])
+	except:
+		pass
+	print
 
 def auto_cmd(cmd,description):
 	stbl = "  " + cmd + " "*(7-len(cmd)+7) + description + " "*(11-len(description))
@@ -246,12 +264,12 @@ def auto_cmd(cmd,description):
 
 console.set_font("Menlo",8)
 print """
-       =[ mobilesploit v1.4.4.02725-mobile                ]
-+ -- --=[ %s exploits - %s auxiliary - 0 post               ]
+       =[ mobilesploit v1.5.4.72942-mobile                ]
++ -- --=[ %s exploits - %s auxiliary - 1 post               ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
 
-""" %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payloads"))-1)
+""" %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payload"))-1)
 time.sleep(0.5)
 console.set_font("Menlo",9.5)
 
@@ -317,13 +335,18 @@ def meta_help(data,loc):
 	elif data == "get options":
 		for _ in var:
 			print _
+	if data == "show payloads" or data == "show payload":
+		show_payload()
 	if data.startswith("set "):
 		if "set exploit/" in data or "set auxiliary/" in data or "set payload/" in data:
 			data = data[4:].split("/")
 		else:
 			data = data[4:].split(" ")
 		try:
-			sets.update({data[0]:data[1]})
+			if str(data[0]) == "payload" and "." in str(data[1]):
+				sets.update({data[0]:open("./payload/"+data[1]).read().replace("\n","").replace("\r","")})
+			else:
+				sets.update({data[0]:data[1]})
 			tran = data[0]+" => "+data[1]
 			var.append(tran)
 			print tran
@@ -347,7 +370,7 @@ def meta_help(data,loc):
 		auto_cmd("size","Changes font size")
 		auto_cmd("clear","Resets screen activity")
 		auto_cmd("banner","Show the Unicode Banner")
-		auto_cmd("show exploits","Shows available exploits")
+		auto_cmd("show exploits","Show Available Exploits")
 		print
 
 def cpoint(loc=""):
