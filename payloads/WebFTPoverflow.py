@@ -61,7 +61,7 @@ def show_opt():
 
 try:
 	if desc == "get-info":
-		auto_info(name,"payloads/WebFTPoverflow","Python 2.7","No","N/A","Normal","7/8/17","Sungchul Park")
+		auto_info(name,"exploit/WebFTPoverflow","Python 2.7","No","N/A","Normal","7/8/17","Sungchul Park")
 		show_opt()
 		targets = {"1":"Winows 7 SP1","2":"Easy File Sharing Website 7.2"}
 		auto_targ(targets)
