@@ -47,6 +47,9 @@ def set_font(font,size):
 	do use font change.
 	"""
 	pass
+import os
+def clear():
+	os.system("clear")
 
 def write_link(url,text):
 	"""
