@@ -229,7 +229,7 @@ def unilogo():
 	print
 	console.set_font("Menlo",8)
 	print """
-       =[ mobilesploit v1.5.4.72942-mobile                ]
+       =[ mobilesploit v1.5.4.82942-mobile                ]
 + -- --=[ %s exploits - %s auxiliary - 1 post               ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
@@ -264,7 +264,7 @@ def auto_cmd(cmd,description):
 
 console.set_font("Menlo",8)
 print """
-       =[ mobilesploit v1.5.4.72942-mobile                ]
+       =[ mobilesploit v1.5.4.82942-mobile                ]
 + -- --=[ %s exploits - %s auxiliary - 1 post               ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
@@ -313,15 +313,9 @@ def meta_help(data,loc):
 			for _ in os.listdir("./"):
 				try:
 					if "." not in _:
-						execfile(fdir("",_)+".py",{"desc":"get-info","name":data[5:]})
+						execfile(fdir(data[5:],_)+".py",{"desc":"get-info","name":data[5:]})
 				except:
 					pass
-		except:
-			pass
-	if data == "info" and loc != "":
-		try:
-			name = loc.split("/")
-			execfile(fdir(name[1],name[0])+".py",{"desc":"get-info","name":name[1]})
 		except:
 			pass
 	if data == "show options" and loc != "":
@@ -371,7 +365,7 @@ def meta_help(data,loc):
 		auto_cmd("clear","Resets screen activity")
 		auto_cmd("banner","Show the Unicode Banner")
 		auto_cmd("show exploits","Show Available Exploits")
-		auto_cmd("show payloads","Show Available Payloads")
+		auto_cmd("remove","Delete Variable")
 		print
 
 def cpoint(loc=""):
@@ -422,6 +416,17 @@ def cpoint(loc=""):
 				pass
 		if data == "size":
 			console.set_font("Menlo",9.5)
+		if data.startswith("remove ") and len(data) > 6:
+			data = data[7:]
+			try:
+				if data in sets:
+					t = data+" => "+sets.get(data)
+					sets.pop(data)
+					var.remove(t)
+					print "Removed Values For \"%s\"" %data
+			except Exception as e:
+				print e
+				pass
 
 while 1:
 	cpoint()
