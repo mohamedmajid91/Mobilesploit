@@ -258,6 +258,23 @@ def show_payload():
 		pass
 	print
 
+def show_auxiliary():
+	print "\nAvailable Auxiliary"
+	print "====================\n"
+	print "  Name             Rank        Description"
+	print "  ----             ----        -----------"
+	try:
+		for _ in os.listdir("./auxiliary"):
+			a = "./auxiliary/"
+			try:
+				if ".py" in _ and "_" not in _:
+					execfile(a+_,{"desc":"get-id","name":_})
+			except:
+				pass
+	except:
+		pass
+	print 
+
 def auto_cmd(cmd,description):
 	stbl = "  " + cmd + " "*(7-len(cmd)+7) + description + " "*(11-len(description))
 	print stbl
@@ -290,6 +307,8 @@ def meta_launch(app):
 		pass
 
 def meta_help(data,loc):
+	if data == "show auxiliary" or data == "show aux":
+		show_auxiliary()
 	if data == "exploit":
 		meta_launch(loc)
 	if data == "show exploits":
