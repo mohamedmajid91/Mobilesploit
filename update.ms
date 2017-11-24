@@ -6,21 +6,27 @@
 import os, sys, requests, time, random, zipfile, urllib, shutil
 
 def extract_update(update):
-	zip_ref = zipfile.ZipFile(update, "r")
-	zip_ref.extractall("./")
-	zip_ref.close()
-	os.remove("temp.zip")
-	os.remove("packages.zip")
-	for _ in os.listdir("./packages"):
-		if _ in os.listdir("./exploits"):
-			u = open("packages/"+_).read()
-			f = open("exploits/"+_,"w")
-			f.write(u)
-			f.close()
-		else:
-			shutil.move("packages/"+_,"./exploits")
-	shutil.rmtree("./packages")
-	
+	try:
+		zip_ref = zipfile.ZipFile(update, "r")
+		zip_ref.extractall("./")
+		zip_ref.close()
+		os.remove("temp.zip")
+		os.remove("packages.zip")
+		for _ in os.listdir("./packages"):
+			if _ in os.listdir("./exploits"):
+				u = open("packages/"+_).read()
+				f = open("exploits/"+_,"w")
+				f.write(u)
+				f.close()
+			else:
+				shutil.move("packages/"+_,"./exploits")
+		shutil.rmtree("./packages")
+	except Exception as e:
+		print
+		print "[-] Wrong Location"
+		print e
+		print
+		sys.exit(1)
 
 def download(filename):
 	updater = urllib.FancyURLopener()
