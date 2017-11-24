@@ -1,9 +1,14 @@
-# Version: "v1"
+# Version: "v1.3"
 # Description: "Testing Phase"
 # Packages: 1
 # File: "packages.zip"
 
 import os, sys, requests, time, random, zipfile, urllib, shutil
+
+try:
+	force
+except:
+	force = False
 
 def extract_update(update):
 	try:
@@ -86,7 +91,7 @@ for _ in range(1):
 		print
 		break
 	
-	if stat != update:
+	if stat.split("\n")[0] != update.split("\n")[0] or force:
 		packages = update.split("\n")[2].replace("# ","").replace(":","=")
 		version = update.split("\n")[0].replace("# ","").replace(":","=")
 		description = update.split("\n")[1].replace("# ","").replace(":","=")
