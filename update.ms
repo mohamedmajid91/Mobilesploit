@@ -1,6 +1,6 @@
-# Version: "v1.6"
-# Description: "Alpha Phase"
-# Packages: 18
+# Version: "v1.7"
+# Description: "Final-Alpha Phase"
+# Packages: 19
 # File: "packages.zip"
 
 import os, sys, requests, time, random, zipfile, urllib, shutil
