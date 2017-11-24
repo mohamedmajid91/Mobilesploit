@@ -1,4 +1,4 @@
-# Version: "v1.3"
+# Version: "v1.4"
 # Description: "Testing Phase"
 # Packages: 1
 # File: "packages.zip"
@@ -61,8 +61,10 @@ def mobileupdate(rate=0.0061,val="",v="",d="", install=""):
 		extract_update(install)
 		time.sleep(0.5)
 		print "\nMobilesploit Update Complete!\n"
-
-default = open("try.py").read()
+try:
+  default = open("update.ms").read()
+except:
+  default = ""
 
 updateurl = "https://raw.githubusercontent.com/RussianOtter/Mobilesploit/master/update.ms"
 
