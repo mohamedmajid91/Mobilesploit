@@ -1,6 +1,6 @@
-# Version: "v1.4"
-# Description: "Testing Phase"
-# Packages: 1
+# Version: "v1.5"
+# Description: "Alpha Phase"
+# Packages: 18
 # File: "packages.zip"
 
 import os, sys, requests, time, random, zipfile, urllib, shutil
@@ -18,13 +18,13 @@ def extract_update(update):
 		os.remove("temp.zip")
 		os.remove("packages.zip")
 		for _ in os.listdir("./packages"):
-			if _ in os.listdir("./exploits"):
+			if _ in os.listdir("./exploit"):
 				u = open("packages/"+_).read()
-				f = open("exploits/"+_,"w")
+				f = open("exploit/"+_,"w")
 				f.write(u)
 				f.close()
 			else:
-				shutil.move("packages/"+_,"./exploits")
+				shutil.move("packages/"+_,"./exploit")
 		shutil.rmtree("./packages")
 	except Exception as e:
 		print
