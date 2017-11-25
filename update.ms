@@ -1,5 +1,5 @@
-# Version: "v1.7"
-# Description: "Final-Alpha Phase"
+# Version: "v1.8"
+# Description: "Bug Fixes"
 # Packages: 19
 # File: "packages.zip"
 
