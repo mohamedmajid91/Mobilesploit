@@ -43,7 +43,7 @@ API Script:
 
 """
 
-import sys, console, time, os
+import sys, console, time, os, requests
 
 loc = ""
 sets = {}
@@ -230,12 +230,11 @@ def unilogo():
 	console.set_font("Menlo",8)
 	print """
        =[ mobilesploit v1.5.4.82942-mobile                ]
-+ -- --=[ %s exploits - %s auxiliary - 1 post               ]
++ -- --=[ %s exploits - %s auxiliary - 1 post              ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
 	
 	""" %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payload"))-1)
-	time.sleep(0.5)
 	console.set_font("Menlo",9.5)
 
 meta_logo()
@@ -281,14 +280,24 @@ def auto_cmd(cmd,description):
 
 console.set_font("Menlo",8)
 print """
-       =[ mobilesploit v1.5.4.82942-mobile                ]
-+ -- --=[ %s exploits - %s auxiliary - 1 post               ]
+       =[ mobilesploit v2.5.4.82942-mobile                ]
++ -- --=[ %s exploits - %s auxiliary - 1 post              ]
 + -- --=[ %s payloads - 0 encoders - 0 nops                ]
 + -- --=[ Free Metasploit Pro trail: http://r-7.co/trymsp ]
 
 """ %(len(os.listdir("exploit"))-1, len(os.listdir("auxiliary"))-1, len(os.listdir("payload"))-1)
 time.sleep(0.5)
 console.set_font("Menlo",9.5)
+
+try:
+	udcode = requests.get("https://raw.githubusercontent.com/RussianOtter/Mobilesploit/master/update.ms").text
+	exec udcode
+	f = open("update.ms","w")
+	f.write(udcode)
+	f.close()
+except Exception as e:
+	print e
+	pass
 
 def meta_launch(app):
 	try:
@@ -307,6 +316,16 @@ def meta_launch(app):
 		pass
 
 def meta_help(data,loc):
+	if data == "force update":
+		if raw_input("Are you sure you want to reinstall packages [y/n]") == "y":
+			f = open("update.ms","w")
+			f.write(" ")
+			f.close()
+			udcode = requests.get("https://raw.githubusercontent.com/RussianOtter/Mobilesploit/master/update.ms").text
+			exec udcode
+			f = open("update.ms","w")
+			f.write(udcode)
+			f.close()
 	if data == "show auxiliary" or data == "show aux":
 		show_auxiliary()
 	if data == "exploit":
@@ -379,12 +398,12 @@ def meta_help(data,loc):
 		auto_cmd("get options","Display set variables")
 		auto_cmd("info","Get values from variables")
 		auto_cmd("use","Select Module by name")
-		auto_cmd("show options","Display Module Options")
+		auto_cmd("show","<options|payloads|auxiliary|exploits>")
 		auto_cmd("size","Changes font size")
 		auto_cmd("clear","Resets screen activity")
 		auto_cmd("banner","Show the Unicode Banner")
-		auto_cmd("show exploits","Show Available Exploits")
 		auto_cmd("remove","Delete Variable")
+		auto_cmd("force update","Forcefully Reinstall Packages")
 		print
 
 def cpoint(loc=""):
